@@ -22,3 +22,8 @@ var quantizeScale = d3.scaleQuantize()
 // console.log(quantizeScale(50)); // white
 // console.log(quantizeScale(77)); // green
 // console.log(quantizeScale.invertExtent('white')); // [33.333333333333336, 66.66666666666667]
+
+var ordinalScale = d3.scaleOrdinal()
+    .domain(['poor', 'good', 'great'])
+    .range(['red', 'white', 'green']);
+// console.log(ordinalScale('good')); // white
