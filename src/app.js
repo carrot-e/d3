@@ -58,3 +58,11 @@ let secondLink = d3.select('a:nth-child(2)')
     .classed('red', true)
     .text('kek!');
     // .style('color', 'red');
+
+d3.select('.title')
+    .insert('button', 'a:first-child')
+    // .append('button')
+    .html('abc <b>def</b>');
+
+d3.select('.action')
+    .remove();
