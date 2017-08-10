@@ -27,3 +27,21 @@ var ordinalScale = d3.scaleOrdinal()
     .domain(['poor', 'good', 'great'])
     .range(['red', 'white', 'green']);
 // console.log(ordinalScale('good')); // white
+
+
+d3.json('data/data.json', (data) => {
+    // console.log(data);
+
+    let min = d3.min(data, i => i.age);
+    let max = d3.max(data, i => i.age);
+    let extent = d3.extent(data, i => i.age);
+    // console.log(min, max, extent);
+
+    let scale = d3.scaleLinear()
+        .domain(extent)
+        .range([0, 600]);
+
+    // gets UNIQUE values (i.e. no same values)
+    let ages = d3.set(data, (i) => i.age).values();
+    // console.log(ages);
+});
