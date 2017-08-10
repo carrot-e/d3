@@ -28,7 +28,7 @@ var ordinalScale = d3.scaleOrdinal()
     .range(['red', 'white', 'green']);
 // console.log(ordinalScale('good')); // white
 
-
+// Load and inspect data
 d3.json('data/data.json', (data) => {
     // console.log(data);
 
@@ -45,3 +45,10 @@ d3.json('data/data.json', (data) => {
     let ages = d3.set(data, (i) => i.age).values();
     // console.log(ages);
 });
+
+// Select DOM Elements with D3
+let container = d3.select('div.title');
+let a = d3.selectAll('div a');
+// console.log(container.selectAll('a').nodes());
+// console.log(a.nodes());
+// console.log(d3.selectAll('.action').size());
