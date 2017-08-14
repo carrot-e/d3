@@ -1,5 +1,5 @@
 {
-  "name": "d3",
+  "name": "d3-learning",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.13"
+  },
+  "dependencies": {
+    "d3": "^4.10.0"
   }
 }
